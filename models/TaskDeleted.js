@@ -8,6 +8,6 @@ const TaskDeletedSchema = new mongoose.Schema({
     required: true
 }
 });
-TaskDeletedSchema.index({ expireAt: 1 }, { expireAfterSeconds : 0 });
+TaskDeletedSchema.index({ expireAt: 1 }, { expireAfterSeconds : 300 });
 const TaskDeleted = mongoose.model("TaskDeleted", TaskDeletedSchema);
 module.exports = TaskDeleted;

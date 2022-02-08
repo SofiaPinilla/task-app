@@ -12,5 +12,6 @@ mongoose
   .catch((err) => console.error(err));
 
 app.use('/tasks',require('./routes/tasks'))
+app.use('/tasksDeleted',require('./routes/tasksDeleted'))
 
 app.listen(PORT, ()=> console.log('Servidor levantado en el puerto ' + PORT))
